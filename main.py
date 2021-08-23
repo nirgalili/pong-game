@@ -39,16 +39,15 @@ while game_is_on:
     if ball.xcor() > 350 and ball.distance(paddle_right) < 61:
         ball.change_x_heading()
 
-    if ball.xcor() < -350 and ball.distance((paddle_left)) < 61:
+    if ball.xcor() < -350 and ball.distance(paddle_left) < 61:
         ball.change_x_heading()
 
+    if ball.xcor() > 380:
+        screen.title("Left paddle wins!")
+        game_is_on = False
 
-    # if paddle_right.distance(ball) < 20:
-    #     ball.change_x_heading()
-    #
-    # if paddle_left.distance(ball) < 20:
-    #     ball.change_x_heading()
-
-
+    if ball.xcor() < -380:
+        screen.title("Right paddle wins!")
+        game_is_on = False
 
 screen.exitonclick()
