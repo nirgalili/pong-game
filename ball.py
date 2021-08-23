@@ -14,8 +14,8 @@ class Ball(Turtle):
         self.penup()
         self.setheading(rand_heading)
 
-    def move(self):
-        self.forward(3)
+    def move(self, pace):
+        self.forward(pace)
 
     def change_y_heading(self):
         new_heading = 360 - self.heading()
